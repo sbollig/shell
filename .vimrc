@@ -10,7 +10,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
+au BufWritePre /tmp/* setlocal noundofile
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -141,4 +141,11 @@ filetype plugin on
 :set laststatus=2
 :highlight CursorLine term=bold cterm=bold ctermbg=darkgray
 :set cursorline
+"Keep Unfo for old sessions
+if has('persistent_undo') 
+    set undodir=$HOME/tmp/.VIM_UNDO_FILES
+    set undolevels=5000
+    set undofile
+endif
 "END
+
