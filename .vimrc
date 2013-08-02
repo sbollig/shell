@@ -147,5 +147,7 @@ if has('persistent_undo')
     set undolevels=5000
     set undofile
 endif
+"Number Formats to not use Octor Formats for incrementing
+set nrformats=
 "END
 
