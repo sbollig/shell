@@ -139,8 +139,13 @@ filetype plugin on
 "set the statusline
 :set statusline=Filename:%F\ Line:\ %l\ Col:\ %c\ %P\ %y\ %M\ sbollig 
 :set laststatus=2
+" now set it up to change the status line based on mode
+if version >= 700
+   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+endif
 :highlight CursorLine term=bold cterm=bold ctermbg=darkgray
-:set cursorline
+:set cursorline  
 "Keep Unfo for old sessions
 if has('persistent_undo') 
     set undodir=$HOME/tmp/.VIM_UNDO_FILES
