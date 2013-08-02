@@ -149,5 +149,8 @@ if has('persistent_undo')
 endif
 "Number Formats to not use Octor Formats for incrementing
 set nrformats=
+"change upppercase letter to uppercase word
+map gU gUaw
+map gu guaw
 "END
 
