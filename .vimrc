@@ -137,7 +137,7 @@ filetype plugin on
 "perl doc when entering K on a keyword
 :set keywordprg=perldoc\ -f
 "set the statusline
-:set statusline=Filename:%F\ Line:\ %l\ Col:\ %c\ %P\ %y\ %M\ sbollig 
+:set statusline=Filename:%F\ Line:\ %l\ Col:\ %c\ %P\ %y\ %M\ gU 
 :set laststatus=2
 " now set it up to change the status line based on mode
 if version >= 700
@@ -158,4 +158,3 @@ set nrformats=
 map gU gUaw
 map gu guaw
 "END
-
