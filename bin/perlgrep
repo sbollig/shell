@@ -1,0 +1,21 @@
+#! /usr/bin/perl  -wnl
+#se strict; 
+use warnings;
+use v5.10; 
+
+
+BEGIN {
+    my $Usage="Usage: $0 'RE' [file ...]";
+    @ARGV > 0 or warn "$Usage\n" and exit 31; # 31 means no arg
+
+    $pattern = shift;
+    defined $pattern and $pattern ne "" or
+        warn "$Usage\n" and exit 27; # arg undefined or empty
+}
+
+# Now the -n loop takes input from files named in @ARGV, or from STDIN
+
+print if /$pattern/;    # if match print record
+END {
+    print $pattern;
+}
