@@ -103,7 +103,6 @@ set textwidth=78    "Wrap at this column
 set matchpairs+=<:> "Allow % to bounce between angles too
 set nojoinspaces
 "set list
-
 " map configuration
 map :q :confirm q
 noremap % v%  
@@ -141,7 +140,7 @@ filetype plugin on
 :set laststatus=2
 " now set it up to change the status line based on mode
 if version >= 700
-   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=darkgray;
    au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 endif
 :highlight CursorLine term=bold cterm=bold ctermbg=darkgray
