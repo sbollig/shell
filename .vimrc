@@ -119,7 +119,6 @@ iab pwrn use warnings;
 iab pstr use strict;
 iab pv510 use v5.10;
 iab pv514 use v5.14;
-iab pregd use Regexp::Debugger;
 iab sabmail sbollig@gmail.com
 iab sabname Scott A. Bollig
 " dictionary 
