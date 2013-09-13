@@ -14,6 +14,8 @@ for my $version ( values @pb_list ) {
     $versions{$num}=$version;
     print "$num\. $version\n";
 }
-for my $selection ( keys %versions ) { 
-    say $versions{$selection};
-}
+my $selection = <STDIN>;
+say $selection;
+#or my $selection ( keys %versions ) { 
+#   say $versions{$selection};
+#
