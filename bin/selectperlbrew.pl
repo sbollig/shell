@@ -14,8 +14,11 @@ for my $version ( values @pb_list ) {
     $versions{$num}=$version;
     print "$num\. $version\n";
 }
-my $selection = <STDIN>;
+chomp (my $selection = <STDIN>);
+
 say $selection;
+say "perlbrew use $versions{$selection}";
+#perlbrew use $versions{$selection}` or die;
 #or my $selection ( keys %versions ) { 
 #   say $versions{$selection};
 #
